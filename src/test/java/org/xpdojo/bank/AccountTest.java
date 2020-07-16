@@ -5,13 +5,20 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+
 public class AccountTest {
 
     @Test
     public void depositAnAmountToIncreaseTheBalance() {
 
+        Account testAccount=new Account();
+        assertThat (testAccount.putAmountBalance(5)==5);
+    }
+
+    @Test
+    public void testTheBalance() {
 
         Account testAccount=new Account();
-        assertTrue (testAccount.getBalance()==0);
+        assertThat (testAccount.balance==0);
     }
 }
